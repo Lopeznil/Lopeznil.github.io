@@ -1,3 +1,4 @@
 # Personal Site
 ### Exploring ML/AI and UX/UI
-[![Gif](https://tenor.com/en-CA/view/gojo-satoru-jujutsu-kaisen-jujutsu-kaisen-season-2-heaven-gojo-toji-fushiguro-gif-2585727771152689286)]
+
+![gojo-satoru-jujutsu-kaisen](https://github.com/user-attachments/assets/bd51b783-3674-4cb0-8d42-68b0b6c33de7)
