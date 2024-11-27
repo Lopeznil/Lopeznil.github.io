@@ -770,7 +770,7 @@
 
 		input[type="checkbox"].color4 + label:before,
 		input[type="radio"].color4 + label:before {
-			color: #353865;
+			color: #5d8c6c;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -1192,7 +1192,7 @@
 			}
 
 			ul.contact-icons.color4 > li:before {
-				color: #353865;
+				color: #5d8c6c;
 			}
 
 		ul.grid-icons {
@@ -1635,7 +1635,7 @@
 			input[type="button"].special.color4,
 			button.special.color4,
 			.button.special.color4 {
-				color: #353865 !important;
+				color: #5d8c6c !important;
 			}
 
 			input[type="submit"].special:hover,
@@ -2200,7 +2200,7 @@
 			.panel > *.color4 {
 				background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
 				background-size: 128px 128px, auto;
-				background-color: #353865;
+				background-color: #5d8c6c;
 			}
 
 			.panel > *.color1-alt {
@@ -2717,7 +2717,7 @@
 		.panel.color4 {
 			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
 			background-size: 128px 128px, auto;
-			background-color: #353865;
+			background-color: #5d8c6c;
 		}
 
 		.panel.color1-alt {
@@ -2775,7 +2775,7 @@
 			.panel > *.color4 {
 				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
 				background-size: 128px 128px, auto;
-				background-color: #353865;
+				background-color: #5d8c6c;
 			}
 
 			.panel > *.color1-alt {
@@ -3202,7 +3202,7 @@
 			.panel.color4 {
 				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
 				background-size: 128px 128px, auto;
-				background-color: #353865;
+				background-color: #5d8c6c;
 			}
 
 			.panel.color1-alt {
