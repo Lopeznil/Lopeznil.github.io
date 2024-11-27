@@ -2198,7 +2198,7 @@
 			}
 
 			.panel > *.color4 {
-				background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(93, 140, 108, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(93, 140, 132, 0.175));
+				background-image: url("../../images/overlay.png");
 				background-size: 128px 128px, auto;
 				background-color: #5d8c6c;
 			}
