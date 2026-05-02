@@ -662,8 +662,10 @@
 .metrics { padding-block: clamp(var(--space-12), 6vw, var(--space-16)); }
 .metrics__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: var(--space-6);
+  justify-items: center;   /* center each metric block */
+  text-align: center;
 }
 @media (min-width: 880px) { .metrics__grid { grid-template-columns: repeat(4, 1fr); gap: var(--space-8); } }
 
