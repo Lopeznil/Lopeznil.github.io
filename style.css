@@ -659,13 +659,22 @@
 /* ===========================================================
    Metrics
    =========================================================== */
-.metrics { padding-block: clamp(var(--space-12), 6vw, var(--space-16)); }
+.metrics {
+  padding-block: clamp(var(--space-12), 6vw, var(--space-16));
+  display: flex;
+  justify-content: center;
+}
+
 .metrics__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
   justify-items: center;
+  align-items: center;
   text-align: center;
+  width: 100%;
+  max-width: 960px;
+  margin-inline: auto;
 }
 @media (min-width: 880px) { .metrics__grid { grid-template-columns: repeat(4, 1fr); gap: var(--space-8); } }
 
