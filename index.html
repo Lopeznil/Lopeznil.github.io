@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Requery — AI agents for biopharma asset intelligence</title>
+  <meta name="description" content="Requery is an enterprise AI platform for biopharma BD, search, and competitive intelligence teams. Describe what you're looking for in plain language. Our agents continuously surface, rank, and monitor external assets across trials, patents, and literature." />
+  <meta property="og:title" content="Requery — AI agents for biopharma asset intelligence" />
+  <meta property="og:description" content="Turn weeks of analyst work into an always-on research operation." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&f[]=jetbrains-mono@400,500&f[]=fraunces@400,500,600&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0e0c'/%3E%3Cpath d='M9 22 V10 H16 a4 4 0 0 1 0 8 H12' fill='none' stroke='%2384e0a8' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 18 L23 24' fill='none' stroke='%2384e0a8' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- ========================================================
+       HEADER
+  ========================================================= -->
+  <header class="header">
+    <div class="container header__inner">
+      <!--
+        ===== LOGO =====
+        To replace the logo, do ONE of the following:
+
+        Option A — Use an image file (PNG / SVG / JPG):
+          <a href="#" class="brand" aria-label="Requery home">
+            <img class="brand__logo" src="assets/logo.svg" alt="Requery" />
+          </a>
+
+        Option B — Paste a different inline SVG (current default below).
+        Tip: keep stroke="currentColor" or fill="currentColor" so it picks up
+        the theme accent color automatically.
+
+        Option C — Wordmark only:
+          <a href="#" class="brand" aria-label="Requery home">
+            <span class="brand__name">Requery</span>
+          </a>
+      -->
+      <a href="#" class="brand" aria-label="Requery home">
+        <svg class="brand__mark" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
+          <path d="M9 22 V10 H16 a4 4 0 0 1 0 8 H12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 18 L23 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        <span class="brand__name">Requery</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#platform">Platform</a>
+        <a href="#workflow">How it works</a>
+        <a href="#sources">Sources</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch theme"></button>
+        <a href="#demo" class="btn btn--primary btn--sm">Request demo</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================
+         HERO
+    ========================================================= -->
+    <section class="hero">
+      <!-- Hero background video
+           ----------------------------------------------------------
+           To embed your background video:
+           1. Drop the file into ./assets/ (e.g. hero-bg.mp4 / hero-bg.webm).
+           2. Update the <source> tags below.
+           3. Optional: set a poster image (./assets/hero-bg-poster.jpg) for
+              the pre-load frame and reduced-motion fallback.
+           The placeholder gradient shows behind the text until a real
+           video file is in place. The .hero__overlay layer keeps the
+           text legible regardless of what plays underneath.
+      -->
+      <div class="hero__bg" aria-hidden="true">
+        <video
+          class="hero__bg-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/hero-bg-poster.jpg">
+          <source src="assets/hero-bg.webm" type="video/webm" />
+          <source src="assets/hero-bg.mp4"  type="video/mp4"  />
+        </video>
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <h1 class="hero__title">
+          Asset intelligence at the speed of <em>thought</em>.
+        </h1>
+
+        <p class="hero__lede">
+          Requery is an enterprise AI platform for biopharma teams who need to identify and
+          evaluate external assets faster than any human team could manage alone. Describe what
+          you're looking for in plain language — our agents do the rest.
+        </p>
+
+        <div class="hero__cta">
+          <a href="#demo" class="btn btn--primary btn--lg">
+            Request a demo
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#workflow" class="btn btn--ghost btn--lg">See how it works</a>
+        </div>
+
+        <p class="hero__platforms">Trusted by BD, search &amp; evaluation, and competitive intelligence teams at top-20 biopharma.</p>
+
+        <!-- Embedded product demo video
+             ----------------------------------------------------------
+             To embed your product video:
+             1. Drop the file into ./assets/ (e.g. hero.mp4 / hero.webm).
+             2. Update the <source> tags below.
+             3. Optional: add a poster image (./assets/hero-poster.jpg) for the
+                pre-load frame and reduced-motion fallback.
+             The placeholder shown is a styled frame so the layout looks
+             complete even before the video file is added.
+        -->
+        <figure class="hero__mock" aria-label="Requery product demo">
+          <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="assets/hero-poster.jpg"
+            aria-label="Requery product walkthrough">
+            <source src="assets/hero.webm" type="video/webm" />
+            <source src="assets/hero.mp4"  type="video/mp4"  />
+            Your browser doesn't support embedded video.
+          </video>
+
+          <!-- Decorative placeholder visible until a real video file is added.
+               Remove this element once your video is in place. -->
+          <div class="video-placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M10 8.5v7l6-3.5-6-3.5z" fill="currentColor" stroke="none"/>
+            </svg>
+            <p>Product walkthrough <span>0:42</span></p>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         LOGOS / TRUST
+    ========================================================= -->
+    <section class="trust">
+      <div class="container">
+        <p class="trust__label">Working alongside teams at</p>
+        <div class="trust__row">
+          <span class="trust__item">Genentech</span>
+          <span class="trust__sep" aria-hidden="true">·</span>
+          <span class="trust__item">Bristol Myers Squibb</span>
+          <span class="trust__sep" aria-hidden="true">·</span>
+          <span class="trust__item">AstraZeneca</span>
+          <span class="trust__sep" aria-hidden="true">·</span>
+          <span class="trust__item">Vertex</span>
+          <span class="trust__sep" aria-hidden="true">·</span>
+          <span class="trust__item">Moderna</span>
+          <span class="trust__sep" aria-hidden="true">·</span>
+          <span class="trust__item">Sanofi</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         METRICS
+    ========================================================= -->
+    <section class="metrics">
+      <div class="container metrics__grid">
+        <div class="metric">
+          <div class="metric__num">42M+</div>
+          <div class="metric__label">Primary sources indexed</div>
+          <div class="metric__sub">Trials, patents, literature, filings, conferences</div>
+        </div>
+        <div class="metric">
+          <div class="metric__num">14&nbsp;days&nbsp;<span>→</span>&nbsp;14&nbsp;min</div>
+          <div class="metric__label">Average time-to-shortlist</div>
+          <div class="metric__sub">Measured across 31 customer landscapes</div>
+        </div>
+        <div class="metric">
+          <div class="metric__num">3.2×</div>
+          <div class="metric__label">More assets surfaced</div>
+          <div class="metric__sub">Vs. analyst-led reviews of the same scope</div>
+        </div>
+        <div class="metric">
+          <div class="metric__num">24/7</div>
+          <div class="metric__label">Continuous monitoring</div>
+          <div class="metric__sub">Re-ranks the moment the landscape moves</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PLATFORM PILLARS
+    ========================================================= -->
+    <section class="section" id="platform">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">The platform</span>
+          <h2 class="section__title">Three capabilities.<br/>One <em>continuous</em> research loop.</h2>
+          <p class="section__sub">
+            Requery replaces a fragmented stack of databases, alerts, and spreadsheets with
+            a single agentic platform purpose-built for asset intelligence in biopharma.
+          </p>
+        </div>
+
+        <div class="pillars">
+          <article class="pillar">
+            <div class="pillar__num">01</div>
+            <div class="pillar__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="11" cy="11" r="7"/>
+                <path d="m20 20-3.5-3.5"/>
+                <path d="M8 11h6M11 8v6"/>
+              </svg>
+            </div>
+            <h3>Discover</h3>
+            <p>
+              Describe a thesis in plain language. Agents fan out across millions of primary sources —
+              ClinicalTrials.gov, EU CTR, USPTO, EPO, PubMed, preprints, conference abstracts, SEC filings,
+              and licensed datasets — and surface every asset that fits.
+            </p>
+            <ul class="pillar__list">
+              <li>Natural-language thesis input</li>
+              <li>Cross-modality entity resolution</li>
+              <li>De-duplicated across all sources</li>
+            </ul>
+          </article>
+
+          <article class="pillar">
+            <div class="pillar__num">02</div>
+            <div class="pillar__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>
+              </svg>
+            </div>
+            <h3>Evaluate</h3>
+            <p>
+              Every asset is scored against the criteria you defined — mechanism fit, clinical stage,
+              IP whitespace, competitive density, ownership clarity, geographic rights, and dozens more —
+              with the underlying evidence one click away.
+            </p>
+            <ul class="pillar__list">
+              <li>Custom multi-factor scorecards</li>
+              <li>Side-by-side comparable views</li>
+              <li>Citation-grade evidence trail</li>
+            </ul>
+          </article>
+
+          <article class="pillar">
+            <div class="pillar__num">03</div>
+            <div class="pillar__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 12a9 9 0 1 0 9-9"/>
+                <path d="M3 4v5h5"/>
+                <circle cx="12" cy="12" r="2"/>
+              </svg>
+            </div>
+            <h3>Monitor</h3>
+            <p>
+              Your shortlist is never stale. Requery re-ranks continuously as new trials post,
+              patents publish, deals close, or papers preprint — and tells you exactly what changed
+              and why your ranking moved.
+            </p>
+            <ul class="pillar__list">
+              <li>Continuous re-scoring</li>
+              <li>Auditable change-log per asset</li>
+              <li>Slack, Teams &amp; email digests</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         WORKFLOW
+    ========================================================= -->
+    <section class="section section--alt" id="workflow">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">How it works</span>
+          <h2 class="section__title">From thesis to ranked shortlist<br/>in a single afternoon.</h2>
+        </div>
+
+        <div class="workflow">
+          <ol class="steps">
+            <li class="step">
+              <span class="step__num">1</span>
+              <div>
+                <h4>Write the thesis</h4>
+                <p>One paragraph in plain language. No Boolean queries, no controlled vocabularies — just describe what you'd brief an analyst with.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step__num">2</span>
+              <div>
+                <h4>Tune the scorecard</h4>
+                <p>Pick the dimensions that matter for this thesis — and weight them. Requery suggests defaults from comparable past landscapes.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step__num">3</span>
+              <div>
+                <h4>Agents fan out</h4>
+                <p>Specialised agents query trial registries, IP offices, literature, and filings in parallel. Results are de-duplicated, normalised, and scored.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step__num">4</span>
+              <div>
+                <h4>Review with the evidence</h4>
+                <p>Every score links to its source. Drill from a number on a row to the exact clinical trial arm or patent claim that produced it.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step__num">5</span>
+              <div>
+                <h4>Stay in the loop</h4>
+                <p>The thesis runs forever. You'll know within minutes when a new asset appears or a ranked one changes — with a one-line explanation of why.</p>
+              </div>
+            </li>
+          </ol>
+
+          <!--
+            ===== HOW-IT-WORKS DEMO IMAGE =====
+            To embed your image:
+              1. Drop the file into the project (e.g. assets/workflow-demo.png).
+              2. Update the src below.
+              3. Optional: provide a 2x file via srcset for retina screens.
+              4. Update the alt text to describe what the image shows.
+            The placeholder shown is purely decorative and auto-hides once a
+            real image loads.
+          -->
+          <figure class="workflow-demo">
+            <img
+              class="workflow-demo__img"
+              src="assets/workflow-demo.png"
+              srcset="assets/workflow-demo.png 1x, assets/workflow-demo@2x.png 2x"
+              alt="Requery query running across clinical, patent, and literature sources"
+              loading="lazy"
+              decoding="async" />
+
+            <!-- Decorative placeholder visible until a real image loads.
+                 Auto-hides once the <img> reports a successful load. -->
+            <div class="workflow-demo__placeholder" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+                <rect x="3" y="4" width="18" height="16" rx="2"/>
+                <circle cx="9" cy="10" r="1.5" fill="currentColor" stroke="none"/>
+                <path d="m21 16-5-5-9 9"/>
+              </svg>
+              <p>Workflow image <span>1600&times;900</span></p>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SOURCES
+    ========================================================= -->
+    <section class="section" id="sources">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Sources</span>
+          <h2 class="section__title">Built on primary evidence —<br/>not summaries of summaries.</h2>
+          <p class="section__sub">
+            Requery reads the underlying records directly. Every score traces back to a citable
+            primary source: a trial protocol, a patent claim, a filing footnote, a paper paragraph.
+          </p>
+        </div>
+
+        <div class="sources">
+          <div class="source-group">
+            <h4>Clinical</h4>
+            <ul>
+              <li>ClinicalTrials.gov</li>
+              <li>EU Clinical Trials Register</li>
+              <li>WHO ICTRP</li>
+              <li>JAPIC, ChiCTR, ANZCTR</li>
+            </ul>
+          </div>
+          <div class="source-group">
+            <h4>Intellectual property</h4>
+            <ul>
+              <li>USPTO &amp; PAIR</li>
+              <li>EPO &amp; Espacenet</li>
+              <li>WIPO PCT</li>
+              <li>Orange &amp; Purple Book</li>
+            </ul>
+          </div>
+          <div class="source-group">
+            <h4>Literature</h4>
+            <ul>
+              <li>PubMed / MEDLINE</li>
+              <li>bioRxiv &amp; medRxiv</li>
+              <li>Conference abstracts</li>
+              <li>Investigator brochures</li>
+            </ul>
+          </div>
+          <div class="source-group">
+            <h4>Corporate &amp; market</h4>
+            <ul>
+              <li>SEC EDGAR (10-K, 10-Q, 8-K)</li>
+              <li>SEDAR, AMF, ESMA</li>
+              <li>Pipeline &amp; deal databases</li>
+              <li>Investor presentations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         CUSTOMER STORY
+    ========================================================= -->
+    <section class="section section--alt" id="customers">
+      <div class="container">
+        <div class="quote">
+          <svg class="quote__mark" viewBox="0 0 60 48" aria-hidden="true">
+            <path d="M0 48V28C0 12 8 2 24 0v8c-8 2-13 8-13 16h13v24H0zm36 0V28c0-16 8-26 24-28v8c-8 2-13 8-13 16h13v24H36z" fill="currentColor"/>
+          </svg>
+          <p class="quote__body">
+            Our search and evaluation team used to spend two weeks scoping a single therapeutic
+            area. With Requery we generate a defensible, fully cited shortlist in an afternoon —
+            and we're catching assets we would have missed entirely.
+          </p>
+          <div class="quote__by">
+            <div class="avatar">RP</div>
+            <div>
+              <div class="quote__name">VP, Search &amp; Evaluation</div>
+              <div class="quote__org">Top-10 biopharma · oncology &amp; immunology</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         CTA
+    ========================================================= -->
+    <section class="cta" id="demo">
+      <div class="container">
+        <div class="cta__card">
+          <span class="eyebrow">Get started</span>
+          <h2 class="cta__title">Bring your hardest thesis.<br/>We'll have answers by Friday.</h2>
+          <p class="cta__lede">
+            See Requery against a real landscape from your pipeline. 30-minute working session
+            with a scientific lead, no slideware.
+          </p>
+          <form class="cta__form" id="contact" onsubmit="event.preventDefault(); this.querySelector('.cta__success').hidden=false; this.querySelector('button').textContent='Request received';">
+            <label class="visually-hidden" for="email">Work email</label>
+            <input id="email" name="email" type="email" required placeholder="you@biopharma.com" />
+            <button class="btn btn--primary btn--lg" type="submit">Request demo</button>
+            <p class="cta__success" hidden>Thanks — we'll reach out within one business day.</p>
+          </form>
+          <p class="cta__fine">For BD, search &amp; evaluation, competitive intelligence, and portfolio strategy teams.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================
+       FOOTER
+  ========================================================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <!-- Footer logo — mirrors the header. Update both to keep them in sync. -->
+      <a href="#" class="footer__brand" aria-label="Requery">
+        <svg class="brand__mark" viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+          <path d="M9 22 V10 H16 a4 4 0 0 1 0 8 H12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 18 L23 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        <span class="brand__name">Requery</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="transform:translate(-${scrollX}px,-${scrollY}px);transform-origin:top left">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>
