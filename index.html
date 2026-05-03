@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Requery — AI agents for biopharma asset intelligence</title>
+  <title>Requery - AI agents for biopharma asset intelligence</title>
   <meta name="description" content="Requery is an enterprise AI platform for biopharma BD, search, and competitive intelligence teams. Describe what you're looking for in plain language. Our agents continuously surface, rank, and monitor external assets across trials, patents, and literature." />
-  <meta property="og:title" content="Requery — AI agents for biopharma asset intelligence" />
+  <meta property="og:title" content="Requery - AI agents for biopharma asset intelligence" />
   <meta property="og:description" content="Turn weeks of analyst work into an always-on research operation." />
   <meta property="og:type" content="website" />
 
@@ -30,16 +30,16 @@
         ===== LOGO =====
         To replace the logo, do ONE of the following:
 
-        Option A — Use an image file (PNG / SVG / JPG):
+        Option A - Use an image file (PNG / SVG / JPG):
           <a href="#" class="brand" aria-label="Requery home">
             <img class="brand__logo" src="assets/logo.svg" alt="Requery" />
           </a>
 
-        Option B — Paste a different inline SVG (current default below).
+        Option B - Paste a different inline SVG (current default below).
         Tip: keep stroke="currentColor" or fill="currentColor" so it picks up
         the theme accent color automatically.
 
-        Option C — Wordmark only:
+        Option C - Wordmark only:
           <a href="#" class="brand" aria-label="Requery home">
             <span class="brand__name">Requery</span>
           </a>
@@ -377,7 +377,7 @@
       <div class="container">
         <div class="section__head">
           <span class="eyebrow">Sources</span>
-          <h2 class="section__title">Built on primary evidence —<br/>not summaries of summaries.</h2>
+          <h2 class="section__title">Built on primary evidence -<br/>not summaries of summaries.</h2>
           <p class="section__sub">
             Requery reads the underlying records directly. Every score traces back to a citable
             primary source: a trial protocol, a patent claim, a filing footnote, a paper paragraph.
@@ -463,7 +463,7 @@
             <label class="visually-hidden" for="email">Work email</label>
             <input id="email" name="email" type="email" required placeholder="you@biopharma.com" />
             <button class="btn btn--primary btn--lg" type="submit">Request demo</button>
-            <p class="cta__success" hidden>Thanks — we'll reach out within one business day.</p>
+            <p class="cta__success" hidden>Thanks! We'll reach out within one business day.</p>
           </form>
           <p class="cta__fine">For BD, search &amp; evaluation, competitive intelligence, and portfolio strategy teams.</p>
         </div>
@@ -476,7 +476,7 @@
   ========================================================= -->
   <footer class="footer">
     <div class="container footer__inner">
-      <!-- Footer logo — mirrors the header. Update both to keep them in sync. -->
+      <!-- Footer logo - mirrors the header. Update both to keep them in sync. -->
       <a href="#" class="footer__brand" aria-label="Requery">
         <svg class="brand__mark" viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
           <path d="M9 22 V10 H16 a4 4 0 0 1 0 8 H12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -499,7 +499,7 @@
   let scrollRaf = 0;
   let trustedTopOrigin = null;
 
-  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // Allow entries like "https://*.preview.i.perplexity.ai" - the wildcard
   // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
   // across multiple labels.
   function matchesAllowedOrigin(origin) {
@@ -523,7 +523,7 @@
   // real origin like https://www.perplexity.ai) we trust event.origin directly.
   // When event.origin is "null" (opaque broker srcdoc), we fall back to the
   // broker's stamped `parentOrigin` to identify the top window. The fallback
-  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // is claim-only - we rely on the browser's native `targetOrigin` enforcement
   // on the response path (see postToTrustedTop) to ensure replies can't be
   // delivered to anyone but the actual top window of that claimed origin.
   function getTrustedParentOrigin(event) {
@@ -536,7 +536,7 @@
   // All responses go to window.top with targetOrigin = the allowlisted origin.
   // An attacker that iframes us inside their own null-origin broker can claim
   // any parentOrigin they like, but the browser will drop the reply whenever
-  // the real top's origin doesn't match — so the screenshot never leaves.
+  // the real top's origin doesn't match - so the screenshot never leaves.
   function postToTrustedTop(message) {
     if (!trustedTopOrigin) return;
     try {
@@ -550,7 +550,7 @@
     try {
       const computedStyle = getComputedStyle(original);
       // cssText on a computed style is the serialized declaration in modern
-      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // Chromium/Safari - a single read beats enumerating ~400 longhand
       // properties. Firefox returns "" here, so we fall back on empty.
       const serialized = computedStyle.cssText;
       if (serialized) {
@@ -592,7 +592,7 @@
 
   // Cache resolved font URL -> data URI across captures. Fonts on a page
   // essentially never change, and a batch run emits multiple captures back to
-  // back — without this we'd refetch + re-base64 every time.
+  // back - without this we'd refetch + re-base64 every time.
   const fontDataUriCache = new Map();
   const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
 
@@ -748,7 +748,7 @@
       stripExternal(clone);
 
       // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
-      // can resolve them — external font URLs aren't fetched during
+      // can resolve them - external font URLs aren't fetched during
       // foreignObject rendering, which would otherwise force a fallback face
       // and change text metrics.
       const inlinedFontCss = await buildInlinedFontCss();
